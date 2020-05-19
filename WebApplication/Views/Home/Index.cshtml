@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <div id="formApp">
+        <div class="input-group input-group-sm">
+            <span class="input-group-addon">Id:</span>
+            <input type="text" class="form-control"  value="{{Id}}"/>
+        </div>
+        <div class="input-group input-group-sm">
+            <span class="input-group-addon">姓名:</span>
+            <input type="text" class="form-control" placeholder="请输入姓名" value="{{Name}}"/>
+        </div>
+        <div class="input-group input-group-sm">
+            <span class="input-group-addon">年龄:</span>
+            <input type="text" class="form-control" placeholder="请输入年龄" value="{{Age}}"/>
+        </div>
+        <div class="input-group input-group-sm">
+            <span class="input-group-addon">手机号:</span>
+            <input type="text" class="form-control" placeholder="请输入手机号" value="Mobile"/>
+        </div>
+        <div class="input-group">
+            <input type="button" class="btn btn-primary" @@click="submit"/>
+        </div>
+    </div>
+</div>
+
+<script>
+    var vm = new Vue({
+        el: '#formApp',
+        data: {
+            Id:0,
+            Name: '',
+            Age: 0,
+            Mobile:''
+        },
+        method: {
+            submit:function() {
+                $.ajax({
+
+                });
+            }
+        }
+    });
+</script>
