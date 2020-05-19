@@ -8,9 +8,39 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <script src="~/lib/vue/vue.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    <script>
+
+        (function (obj) {
+            obj.alert = {
+                success: function (msg) {
+                    showAlert(msg, "alert-success");
+                },
+                error: function (msg) {
+                    showAlert(msg, "alert-danger");
+                }
+            };
+        })(window)
+
+        function showAlert(msg, type) {
+            var htmlStr = "<div class='alert " + type + " alert-dismissible ' style='display: table;width: auto;margin:0 auto;min-width:100px;'>";
+            htmlStr += "<button type='button' class='close' data-dismiss='alert'>&times;</button>";
+            htmlStr += msg;
+            htmlStr += "</div></div>";
+            $(".alert-container").first().html(htmlStr);
+
+            setTimeout(function () {
+                $(".alert").slideToggle();
+            }, 2000);
+        }
+    </script>
 </head>
 <body>
     <header>
+        <div class='text-center alert-container' style='position:absolute;top:5px;z-index: 10000;width: 100%;'>
+          
+        </div>
+      
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">WebApplication</a>

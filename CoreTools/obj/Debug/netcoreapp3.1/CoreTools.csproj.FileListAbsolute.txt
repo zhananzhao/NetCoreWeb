@@ -1,8 +1,0 @@
-D:\Users\CoreConsole\CoreTools\bin\Debug\netcoreapp3.1\CoreTools.deps.json
-D:\Users\CoreConsole\CoreTools\bin\Debug\netcoreapp3.1\CoreTools.dll
-D:\Users\CoreConsole\CoreTools\bin\Debug\netcoreapp3.1\CoreTools.pdb
-D:\Users\CoreConsole\CoreTools\obj\Debug\netcoreapp3.1\CoreTools.csproj.CoreCompileInputs.cache
-D:\Users\CoreConsole\CoreTools\obj\Debug\netcoreapp3.1\CoreTools.AssemblyInfoInputs.cache
-D:\Users\CoreConsole\CoreTools\obj\Debug\netcoreapp3.1\CoreTools.AssemblyInfo.cs
-D:\Users\CoreConsole\CoreTools\obj\Debug\netcoreapp3.1\CoreTools.dll
-D:\Users\CoreConsole\CoreTools\obj\Debug\netcoreapp3.1\CoreTools.pdb

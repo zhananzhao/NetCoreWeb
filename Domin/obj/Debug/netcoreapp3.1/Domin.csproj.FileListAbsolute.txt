@@ -1,8 +1,0 @@
-D:\Users\CoreConsole\Domin\bin\Debug\netcoreapp3.1\Domin.deps.json
-D:\Users\CoreConsole\Domin\bin\Debug\netcoreapp3.1\Domin.dll
-D:\Users\CoreConsole\Domin\bin\Debug\netcoreapp3.1\Domin.pdb
-D:\Users\CoreConsole\Domin\obj\Debug\netcoreapp3.1\Domin.csproj.CoreCompileInputs.cache
-D:\Users\CoreConsole\Domin\obj\Debug\netcoreapp3.1\Domin.AssemblyInfoInputs.cache
-D:\Users\CoreConsole\Domin\obj\Debug\netcoreapp3.1\Domin.AssemblyInfo.cs
-D:\Users\CoreConsole\Domin\obj\Debug\netcoreapp3.1\Domin.dll
-D:\Users\CoreConsole\Domin\obj\Debug\netcoreapp3.1\Domin.pdb
