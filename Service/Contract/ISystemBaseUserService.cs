@@ -5,7 +5,7 @@ using Domin;
 
 namespace Service.Contract
 {
-    interface ISystemBaseUserService
+   public interface ISystemBaseUserService
     {
         /// <summary>
         /// 新增

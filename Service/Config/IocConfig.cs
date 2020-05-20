@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using Autofac;
 using CoreTools;
 
@@ -21,13 +22,28 @@ namespace Service.Config
         protected override void Load(ContainerBuilder builder)
         {
 
-            //builder.RegisterAssemblyTypes()
-            //Type typeBase = typeof(IDependency);
-            //Assembly[] assemblies = AppDomain.CurrentDomain.GetAssemblies().Where<Assembly>(t=>t.);
-            
-            //builder.RegisterAssemblyTypes()
+
+            var typeBase = typeof(IDependency);
+           
+            builder.RegisterAssemblyTypes(GetDIAssembly()).Where(t=>typeBase.IsAssignableFrom(t)&&t!=typeBase&&!t.IsAbstract).PublicOnly().AsImplementedInterfaces().InstancePerLifetimeScope();
+           
         }
 
+
+        /// <summary>
+        /// 过滤掉系统程序集
+        /// </summary>
+        /// <param name="assemblies"></param>
+        /// <returns></returns>
+        private Assembly[] GetDIAssembly() 
+        {
+            
+            Assembly[] assemblies = AppDomain.CurrentDomain.GetAssemblies()
+                .Where(assembly => !Regex.IsMatch(assembly.FullName, "^System|^mscorlib|^Microsoft|^AutoMapper|^Newtonsoft|^Autofac"))
+                .ToArray();
+            return assemblies;
+
+        }
         
     }
 }
